@@ -18,24 +18,37 @@ function App() {
 
 	return (
 		<>
-			<div>
-				<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank" rel="noreferrer">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
+			<nav id="navbar">
+				<a id="navbar-brand" href="#">HygenicMe</a>
+				<div id="navbar-items">
+					<a class="navbar-item" href="#">Home</a>
+					<a class="navbar-item" href="#">Quiz</a>
+					<a class="navbar-item" href="#">FAQ</a>
+					<a class="navbar-item" href="#">Contact</a>
+				</div>
+			</nav>
 
-				<RandomItem maximum={1000} />
+			<div id="welcome" class="header-section">
+				<h2>Welcome to HygenicMe</h2>
+				<h3>Just one click away from a healthier you!</h3>
 			</div>
-			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+
+			<div class="column-section">
+				<div class="header-section">
+					<h2>Who We Are</h2>
+					<p>The creators of HygenicMe strive to create a better world by educating the public about common methods to stay hygenic and practical tips that anyone can apply to their life instantly!</p>
+				</div>
+				<separator></separator>
+				<div class="header-section">
+					<h2>What We Do</h2>
+					<p>We do the Lorem Ipsum Dolor Sit Amet. Super interesting stuff, I know. Let's blabber some more to fill up this page, and I don't think that's enough text. Just a little more yapping to fill up the lorem ipsum dolor sit amet and I think we're good now!</p>
+				</div>
+				<separator></separator>
+				<div class="header-section">
+					<h2>Your Next Steps</h2>
+					<p>You can also do the Lorem Ipsum Dolor Sit Amet. Super interesting stuff, I know. Let's blabber some more to fill up this page, and I don't think that's enough text. Just a little more yapping to fill up the lorem ipsum dolor sit amet and I think we're good now!</p>
+				</div>
+			</div>
 		</>
 	);
 }
