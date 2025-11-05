@@ -3,27 +3,66 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 2em;
-	margin: 0.5em 0;
 	padding: 0.5em 2em;
 	font-size: 2em;
-	background-color: lightblue;
-}
-
-#navbar-brand {
-	font-weight: 700;
-	font-size: 1.2em;
-	color: black;
+	border-bottom: 2px solid lightgrey;
 }
 
 #navbar-items {
 	display: flex;
 	gap: 1em;
+	font-weight: 700;
+	font-size: 0.8em;
+}
+
+#navbar-items .selected {
+	background-color: rgb(245, 245, 245);
+	border-radius: 10px;
+}
+
+#quiz-info-section > h1 {
+	text-align: center;
+	font-size: 2em;
+}
+
+#quiz-info-section > p {
+	text-align: center;
+	font-size: 1.2em;
+	margin: 1em auto;
 }
 
 #welcome {
 	text-align: center;
 	margin: 1em auto;
 	font-size: 1.5em;
+}
+
+#home-banner {
+	height: 300px;
+	width: 100%;
+	object-fit: contain;
+}
+
+#hero-section, #quiz-info-section {
+	margin: 1em auto;
+	padding: 0.1em;
+	background-color: rgb(245, 245, 245);
+}
+
+#footer-items {
+	display: flex;
+	gap: 3em;
+	font-weight: 400;
+}
+
+.footer-item {
+	color: black;
+}
+
+.brand {
+	font-weight: 700;
+	font-size: 1.2em;
+	color: black;
 }
 
 .navbar-item {
@@ -48,6 +87,11 @@
 	align-items: center;
 	margin: 5em auto;
 	flex: 1;
+	max-width: 1000px;
+}
+
+.header-section > h1 {
+	font-size: 2em;
 }
 
 .grid-section {
@@ -61,6 +105,18 @@
 
 .grid-section > .centered {
 	grid-column: 2;
+}
+
+footer .brand {
+	position: absolute;
+	left: 2em;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	gap: 100px;
+	margin: 2em;
 }
 
 separator {
