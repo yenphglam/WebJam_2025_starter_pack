@@ -1,9 +1,9 @@
-#quiz-info-section > h1 {
+#quizInfoSection > h1 {
 	text-align: center;
 	font-size: 2em;
 }
 
-#quiz-info-section > p {
+#quizInfoSection > p {
 	text-align: center;
 	font-size: 1.2em;
 	margin: 1em auto;
@@ -15,13 +15,13 @@
 	font-size: 1.5em;
 }
 
-#home-banner {
+#homeBanner {
 	height: 300px;
 	width: 100%;
 	object-fit: contain;
 }
 
-#hero-section, #quiz-info-section {
+#heroSection, #quizInfoSection {
 	margin: 1em auto;
 	padding: 0.1em;
 	background-color: rgb(245, 245, 245);
