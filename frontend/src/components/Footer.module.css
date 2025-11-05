@@ -1,0 +1,21 @@
+footer .brand {
+	position: absolute;
+	left: 2em;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	gap: 100px;
+	margin: 2em;
+}
+
+#footerItems {
+	display: flex;
+	gap: 3em;
+	font-weight: 400;
+}
+
+.footer {
+	color: black;
+}

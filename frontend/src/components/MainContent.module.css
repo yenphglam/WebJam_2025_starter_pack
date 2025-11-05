@@ -1,0 +1,42 @@
+#quiz-info-section > h1 {
+	text-align: center;
+	font-size: 2em;
+}
+
+#quiz-info-section > p {
+	text-align: center;
+	font-size: 1.2em;
+	margin: 1em auto;
+}
+
+#welcome {
+	text-align: center;
+	margin: 1em auto;
+	font-size: 1.5em;
+}
+
+#home-banner {
+	height: 300px;
+	width: 100%;
+	object-fit: contain;
+}
+
+#hero-section, #quiz-info-section {
+	margin: 1em auto;
+	padding: 0.1em;
+	background-color: rgb(245, 245, 245);
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-weight: 400;
+	color: rgb(93, 93, 93);
+}
+
+h3 {
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+}

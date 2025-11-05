@@ -1,75 +1,7 @@
-#navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 2em;
-	padding: 0.5em 2em;
-	font-size: 2em;
-	border-bottom: 2px solid lightgrey;
-}
-
-#navbar-items {
-	display: flex;
-	gap: 1em;
-	font-weight: 700;
-	font-size: 0.8em;
-}
-
-#navbar-items .selected {
-	background-color: rgb(245, 245, 245);
-	border-radius: 10px;
-}
-
-#quiz-info-section > h1 {
-	text-align: center;
-	font-size: 2em;
-}
-
-#quiz-info-section > p {
-	text-align: center;
-	font-size: 1.2em;
-	margin: 1em auto;
-}
-
-#welcome {
-	text-align: center;
-	margin: 1em auto;
-	font-size: 1.5em;
-}
-
-#home-banner {
-	height: 300px;
-	width: 100%;
-	object-fit: contain;
-}
-
-#hero-section, #quiz-info-section {
-	margin: 1em auto;
-	padding: 0.1em;
-	background-color: rgb(245, 245, 245);
-}
-
-#footer-items {
-	display: flex;
-	gap: 3em;
-	font-weight: 400;
-}
-
-.footer-item {
-	color: black;
-}
-
 .brand {
 	font-weight: 700;
 	font-size: 1.2em;
 	color: black;
-}
-
-.navbar-item {
-	padding: 0.25em 0.5em;
-	color: black;
-	border-radius: 5px;
-	font-size: 0.7em;
 }
 
 .column-section {
@@ -107,34 +39,8 @@
 	grid-column: 2;
 }
 
-footer .brand {
-	position: absolute;
-	left: 2em;
-}
-
-footer {
-	display: flex;
-	justify-content: center;
-	gap: 100px;
-	margin: 2em;
-}
-
 separator {
 	width: 5px;
 	background-color: lightgrey;
 	border-radius: 500px;
-}
-
-h1 {
-	font-size: 3em;
-}
-
-h2 {
-	font-weight: 400;
-	color: rgb(93, 93, 93);
-}
-
-h3 {
-	font-size: 1.5em;
-	margin-bottom: 0.5em;
 }

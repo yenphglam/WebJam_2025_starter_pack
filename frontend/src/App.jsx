@@ -1,12 +1,7 @@
 import { useState } from "react";
 
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Home from "./pages/Home.jsx";
 import "./App.css";
-
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import MainContent from "@/components/MainContent";
 
 /*
 This is the starting point of our application. Here, we can begin coding 
@@ -16,15 +11,13 @@ there are many ways to get your application up and running.
 With App.jsx, we can also define global variables and routes to store information as well as page navigation.
 */
 function App() {
-	const [count, setCount] = useState(0);
+    const [currentPage, setCurrentPage] = useState("home");
 
-	return (
-		<>
-			<Navbar />
-			<MainContent />
-			<Footer />
-		</>
-	);
+    return (
+        <>
+            {currentPage === "home" && <Home />}
+        </>
+    );
 }
 
 export default App;
