@@ -2,9 +2,9 @@
     import "./ClickGerm.css";
 
     const GOAL = 10;
-    const SEC_BETWEEN_APPEAR_MIN = 1000;
-    const SEC_BETWEEN_APPEAR_MAX = 2000;
-    const GERM_LIFE = 1500;
+    const SEC_BETWEEN_APPEAR_MIN = 2500;
+    const SEC_BETWEEN_APPEAR_MAX = 5000;
+    const GERM_LIFE = 5000;
 
     export default function ClickGerm() {
     const [germs, setGerms] = useState([]);
