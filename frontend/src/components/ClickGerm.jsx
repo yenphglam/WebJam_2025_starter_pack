@@ -2,9 +2,9 @@
     import "./ClickGerm.css";
 
     const GOAL = 10;
-    const SEC_BETWEEN_APPEAR_MIN = 500;
-    const SEC_BETWEEN_APPEAR_MAX = 1500;
-    const GERM_LIFE = 1000;
+    const SEC_BETWEEN_APPEAR_MIN = 1000;
+    const SEC_BETWEEN_APPEAR_MAX = 2000;
+    const GERM_LIFE = 1500;
 
     export default function ClickGerm() {
     const [germs, setGerms] = useState([]);
@@ -14,12 +14,21 @@
 
     const timeoutRef = useRef(null);
 
-    // Generate random position inside container
+
+    // Generate random position on either the left or right side area
     const getPosition = () => {
-        const top = Math.random() * 90 + 5 + "%";
-        const left = Math.random() * 90 + 5 + "%";
+        const side = Math.random() < 0.5 ? 'left' : 'right'; // pick which side
+        const top = Math.random() * 90 + 5 + "%"; // random vertical position
+
+        // define horizontal ranges:
+        // left side = 0–40%, right side = 60–100%
+        const left = side === 'left'
+            ? (Math.random() * 30) + "%"      // anywhere between 0%–40%
+            : (Math.random() * 30 + 70) + "%"; // anywhere between 60%–100%
+
         return { top, left };
     };
+
 
     // Create a new germ
     const spawnGerm = () => {
@@ -89,7 +98,7 @@
 
         {winMessage && (
             <div className="win-message">
-            🎉 You successfully killed {GOAL} germs to get away from flu! 🎉
+            🎉 You killed {GOAL} germs to get away from flu! 🎉
             </div>
         )}
 
