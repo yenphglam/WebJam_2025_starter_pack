@@ -4,7 +4,7 @@ import quiz from "../pages/Quiz"
 export default function Quiz() {
     return (
         <>
-        
+            <h1>quiz!!!</h1>
         </>
     );
 }

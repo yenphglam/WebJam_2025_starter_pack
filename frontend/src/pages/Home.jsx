@@ -1,7 +1,7 @@
 import styles from "./Home.module.css";
 
-export default function Home() {
-    return (
+export default function Home({setCurrentPage}) {
+    return(
         <>
             <div className={styles.headerSection}>
                 <h1>HyGenie</h1>
@@ -12,6 +12,7 @@ export default function Home() {
                 <p>
                     Our quiz will ask you basic questions and give you a score for your likelihood of having the flu! We will provide you tips and resources to get help. It only takes 5 minutes, and it could save you more than 5 days of sickness this cold season.
                 </p>
+                <button className={styles.quizbutton} onClick={() => setCurrentPage("quiz")}> Take Quiz</button>
             </div>
         </>
     );
