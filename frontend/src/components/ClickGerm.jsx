@@ -89,7 +89,7 @@
 
         {winMessage && (
             <div className="win-message">
-            🎉 You killed all {GOAL} germs! 🎉
+            🎉 You successfully killed {GOAL} germs to get away from flu! 🎉
             </div>
         )}
 
