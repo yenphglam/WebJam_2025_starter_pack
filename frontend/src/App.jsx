@@ -5,7 +5,7 @@ import Quiz from "./pages/Quiz.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
 import "./App.css";
-
+import ClickGerm from "./components/ClickGerm.jsx";
 /*
 This is the starting point of our application. Here, we can begin coding 
 and transforming this page into whatever best suits our needs. 
@@ -24,6 +24,7 @@ function App() {
             {currentPage === "quiz" && <Quiz />}
             {currentPage === "faq" && <FAQ />}
             {currentPage === "contact" && <Contact />}
+            <ClickGerm />
         </>
     );
 }
