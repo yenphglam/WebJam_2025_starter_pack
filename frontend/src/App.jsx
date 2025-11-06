@@ -20,7 +20,7 @@ function App() {
         <>
             <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
             
-            {currentPage === "home" && <Home />}
+            {currentPage === "home" && <Home setCurrentPage={setCurrentPage} />}
             {currentPage === "quiz" && <Quiz />}
             {currentPage === "faq" && <FAQ />}
             {currentPage === "contact" && <Contact />}
