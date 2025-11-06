@@ -4,8 +4,8 @@ export default function Home({setCurrentPage}) {
     return(
         <>
             <div className={styles.headerSection}>
-                <h1>HyGenie</h1>
-                <h2>Clicks away from a healthier you!</h2>
+                <h1 className={styles.hometitle}>HyGenie</h1>
+                <h2 className={styles.homedesc}>Clicks away from a healthier you!</h2>
             </div>
             <div className={styles.quizInfoSection}>
                 <h1>What's the Flu Quiz?</h1>
