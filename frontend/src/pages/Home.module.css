@@ -44,13 +44,11 @@
 }
 
 .faqBanner {
-    background-image: url("https://media.istockphoto.com/id/1351797773/photo/flask-and-beaker-in-medical-health-science-of-blue-technology-banner-background.jpg?s=612x612&w=0&k=20&c=v8ZrgK2o8k251RPLZbJYxuPFl4FTSNPtpAOcIwniaWw=");
-    background-position-y: 20%;
+    background-image: url("https://images.unsplash.com/photo-1706201763884-116ad16986b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1348");
 }
 
 .contactBanner {
-    background-image: url("https://www.shutterstock.com/image-vector/modern-health-care-medical-background-600nw-2527695527.jpg");
-    background-position-y: 30%;
+    background-image: url("https://images.unsplash.com/photo-1628595351029-c2bf17511435?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1932");
 }
 
 .logo {
