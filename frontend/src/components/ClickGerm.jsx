@@ -86,14 +86,13 @@
     return (
         <div className="game-container">
         {germs.map((g) => (
-            <div
+            <img
             key={g.id}
             className="germ"
             style={{ top: g.top, left: g.left }}
             onClick={() => handleClick(g.id)}
-            >
-            🦠
-            </div>
+            src="src/assets/germ.png"
+            />
         ))}
 
         {winMessage && (
