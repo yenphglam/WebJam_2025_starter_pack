@@ -5,7 +5,7 @@
 
 .navbar {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	gap: 2em;
 	padding: 0.5em 0em;
@@ -24,13 +24,13 @@
 	gap: 1em;
 	font-weight: 700;
 	font-size: 0.8em;
+	margin-right: 2em;
 }
 
 .logo {
 	height: 50px;
 	width: auto;
-	position: absolute;
-	left: calc(50% - 8em);
+	margin-left: 1em;
 }
 
 .navbarItem {
@@ -38,4 +38,10 @@
 	color: black;
 	border-radius: 5px;
 	font-size: 0.7em;
+}
+
+.navspacer{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
 }
