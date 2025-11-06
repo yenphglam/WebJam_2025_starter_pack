@@ -5,7 +5,13 @@
     max-width: 1000px;
 }
 
-.contactSection {
-    max-width: 800px;
-    margin: 2em auto;
+.contactTableContainer {
+  max-width: 800px;     /* Maximum width of the table */
+  margin: 2em auto;     /* Center horizontally and add vertical spacing */
+  border-collapse: collapse;
+}
+
+.contactTable {
+  width: 100%;           /* Make table fill the container */
+  border: 1px solid #ddd; /* Optional: table border */
 }
