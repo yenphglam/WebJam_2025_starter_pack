@@ -1,15 +1,47 @@
-import styles from "./Navbar.module.css"
+import styles from "./Navbar.module.css";
 
-export default function Navbar() {
+export default function Navbar({ currentPage, setCurrentPage }) {
+
+    const handleNavClick = (page) => (e) => {
+        e.preventDefault(); // stop page refresh
+        setCurrentPage(page);
+    };
+
     return (
         <nav className={styles.navbar}>
-            <a className="brand" href="#">HygenicMe</a>
             <div className={styles.navbarItems}>
-                <a className={`${styles.navbarItem} ${styles.selected}`} href="#">Home</a>
-                <a className={styles.navbarItem} href="#">Quiz</a>
-                <a className={styles.navbarItem} href="#">FAQ</a>
-                <a className={styles.navbarItem} href="#">Contact</a>
+                <a
+                    href="#"
+                    className={`${styles.navbarItem} ${currentPage === "home" ? styles.selected : ""}`}
+                    onClick={handleNavClick("home")}
+                >
+                    Home
+                </a>
+
+                <a
+                    href="#"
+                    className={`${styles.navbarItem} ${currentPage === "quiz" ? styles.selected : ""}`}
+                    onClick={handleNavClick("quiz")}
+                >
+                    Quiz
+                </a>
+
+                <a
+                    href="#"
+                    className={`${styles.navbarItem} ${currentPage === "faq" ? styles.selected : ""}`}
+                    onClick={handleNavClick("faq")}
+                >
+                    FAQ
+                </a>
+
+                <a
+                    href="#"
+                    className={`${styles.navbarItem} ${currentPage === "contact" ? styles.selected : ""}`}
+                    onClick={handleNavClick("contact")}
+                >
+                    Contact
+                </a>
             </div>
         </nav>
-    )
+    );
 }

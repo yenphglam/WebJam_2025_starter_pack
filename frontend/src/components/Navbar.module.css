@@ -1,16 +1,17 @@
 .navbarItems .selected {
-	background-color: rgb(245, 245, 245);
+	background-color: #DAFFEF;
 	border-radius: 10px;
 }
 
 .navbar {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	gap: 2em;
 	padding: 0.5em 2em;
 	font-size: 2em;
 	border-bottom: 2px solid lightgrey;
+	/* background-color: #FCFFFD; */
 }
 
 .navbarItems {

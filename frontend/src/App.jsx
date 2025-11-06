@@ -1,6 +1,9 @@
 import { useState } from "react";
-
+import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/Home.jsx";
+import Quiz from "./pages/Quiz.jsx";
+import FAQ from "./pages/FAQ.jsx";
+import Contact from "./pages/Contact.jsx";
 import "./App.css";
 
 /*
@@ -15,7 +18,12 @@ function App() {
 
     return (
         <>
+            <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            
             {currentPage === "home" && <Home />}
+            {currentPage === "quiz" && <Quiz />}
+            {currentPage === "faq" && <FAQ />}
+            {currentPage === "contact" && <Contact />}
         </>
     );
 }
