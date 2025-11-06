@@ -1,5 +1,5 @@
 import styles from "./Quiz.module.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function Quiz() {
     const questions = 
@@ -19,6 +19,7 @@ export default function Quiz() {
     const [answers, setAnswers] = useState(Array(questions.length).fill(null));
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState("");
+    const submitRef = useRef(null); // Ref to submit button
 
     const handleCheck = (index, value) => {
         setSubmitted(false); 
@@ -38,6 +39,12 @@ export default function Quiz() {
     }
     setSubmitted(true);
     };
+
+    useEffect(() => { // Scroll down to show results/error on submit
+        if (submitted || error) {
+            submitRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [submitted, error]);
 
     const score = answers.filter(a => a === "yes").length;
     const message = 
@@ -70,15 +77,15 @@ export default function Quiz() {
             </ol>
         </div>
         {error && <p className={styles.errormsg}>{error}</p>}
-        <div className={styles.submitcontainer}>
-            <button onClick={handleSubmit} className={styles.submitbtn}>Submit</button>
-        </div>
         {submitted && (
             <div className={styles.quizscore}>
                 <h2>Your Score: {score} / {questions.length}</h2>
                 <p>{message}</p>
             </div>
         )}
+        <div className={styles.submitcontainer}>
+            <button ref={submitRef} onClick={handleSubmit} className={styles.submitbtn}>Submit</button>
+        </div>
     </div>
     );
 }

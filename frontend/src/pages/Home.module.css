@@ -14,19 +14,19 @@
     color: #000000;
 }
 
-.quizInfoSection {
+.infoSection {
     position: relative;
     padding: 10em;
-    background-image: url("https://www.conehealth.com/app/files/public/Flu%20Shot%20with%20Bandaid.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
     text-align: center;
+    margin: 3em auto;
 }
 
 /* transparency overlay */
-.quizInfoSection::before {
+.infoSection::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -35,11 +35,35 @@
 }
 
 /* text above overlay */
-.quizInfoSection > * {
+.infoSection > * {
     position: relative;
     z-index: 1;
 }
 
+.quizBanner {
+    background-image: url("https://www.conehealth.com/app/files/public/Flu%20Shot%20with%20Bandaid.png");
+}
+
+.faqBanner {
+    background-image: url("https://media.istockphoto.com/id/1351797773/photo/flask-and-beaker-in-medical-health-science-of-blue-technology-banner-background.jpg?s=612x612&w=0&k=20&c=v8ZrgK2o8k251RPLZbJYxuPFl4FTSNPtpAOcIwniaWw=");
+    background-position-y: 20%;
+}
+
+.contactBanner {
+    background-image: url("https://www.shutterstock.com/image-vector/modern-health-care-medical-background-600nw-2527695527.jpg");
+    background-position-y: 30%;
+}
+
+.logo {
+    height: 4em;
+    width: auto;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
 
 .buttonLight {
     padding: 10px 30px;
@@ -49,11 +73,7 @@
     font-size: 1.1em;
 }
 
-p {
-	font-size: large;
-}
-
-.quizbutton{
+.quizButton{
     text-decoration: none;
     background-color: #64B6AC;
     border: none;
@@ -62,6 +82,7 @@ p {
     font-size: 1rem;
     border-radius: 1rem;
 }
-.quizbutton:hover{
-    background-color: #59adab;
+
+p {
+	font-size: large;
 }

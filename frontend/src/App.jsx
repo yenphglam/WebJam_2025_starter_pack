@@ -19,7 +19,7 @@ function App() {
     return (
         <>
             <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-            
+            <div className="spacer"></div>
             {currentPage === "home" && <Home setCurrentPage={setCurrentPage} />}
             {currentPage === "quiz" && <Quiz />}
             {currentPage === "faq" && <FAQ />}

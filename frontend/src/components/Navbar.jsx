@@ -9,6 +9,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
 
     return (
         <nav className={styles.navbar}>
+            <img src="src\assets\logo.png" alt="HyGenie Logo" className={styles.logo}></img>
             <div className={styles.navbarItems}>
                 <a
                     href="#"

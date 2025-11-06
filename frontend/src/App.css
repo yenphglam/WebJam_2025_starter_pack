@@ -39,8 +39,20 @@
 	grid-column: 2;
 }
 
-separator {
-	width: 5px;
-	background-color: lightgrey;
-	border-radius: 500px;
+.spacer {
+    height: 80px;
+}
+
+button {
+	transition: scale 0.05s ease-in-out;
+}
+
+button:hover {
+	scale: 1.05;
+	background-color: #59adab;
+}
+
+button:active {
+	scale: 0.95;
+	background-color: #4f9998;
 }

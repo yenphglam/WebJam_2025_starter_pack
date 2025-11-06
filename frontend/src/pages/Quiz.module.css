@@ -51,9 +51,6 @@
 	justify-content: center;
 	margin-bottom: 2rem;
 }
-.submitbtn:hover{
-	background-color: #59adab;
-}
 .quizscore{
 	display: flex;
 	flex-direction: column;
