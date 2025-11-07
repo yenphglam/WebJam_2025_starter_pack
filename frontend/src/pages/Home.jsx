@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
+import logo from "../assets/logo.png";
 
 export default function Home() {
     const navigate = useNavigate();
@@ -8,7 +9,7 @@ export default function Home() {
         <>
             <div className={styles.headerSection}>
                 <div className={styles.titleContainer}>
-                    <img src="src\assets\logo.png" alt="HyGenie Logo" className={styles.logo}></img>
+                    <img src={logo} alt="HyGenie Logo" className={styles.logo}></img>
                     <h1 className={styles.hometitle}>HyGenie</h1>
                 </div>
                 <h2 className={styles.homedesc}>Clicks away from a healthier you!</h2>

@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
     const location = useLocation();
@@ -8,7 +9,7 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.navspacer}>
                 <img
-                    src="src\assets\logo.png"
+                    src={logo}
                     alt="HyGenie Logo"
                     onClick={() => (window.location.href = "/")}
                     className={styles.logo}

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./ClickGerm.css";
+import germImg from "../assets/germ.png";
 
 const GOAL = 10;
 const SEC_BETWEEN_APPEAR_MIN = 2500;
@@ -91,7 +92,7 @@ export default function ClickGerm() {
                     className="germ"
                     style={{ top: g.top, left: g.left }}
                     onClick={() => handleClick(g.id)}
-                    src="src/assets/germ.png"
+                    src={germImg}
                 />
             ))}
 
