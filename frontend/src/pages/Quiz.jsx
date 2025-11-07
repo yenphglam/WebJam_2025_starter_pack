@@ -62,13 +62,13 @@ export default function Quiz() {
                     <li key={i}>
                         <span className={styles.questions}>{q}</span>
                         <div className={styles.quizcheckboxes}>
-                            <label>
-                                <input type="checkbox" checked={answers[i] === "yes"} onChange={() => handleCheck(i, "yes")}/>{" "}
+                            <label className={styles.checkboxLabel}>
+                                <input className={styles.checkbox} type="checkbox" checked={answers[i] === "yes"} onChange={() => handleCheck(i, "yes")}/>{" "}
                                 Yes
                             </label>
 
-                            <label>
-                                <input type="checkbox" checked={answers[i] === "no"} onChange={() => handleCheck(i, "no")}/>{" "}
+                            <label className={styles.checkboxLabel}>
+                                <input className={styles.checkbox} type="checkbox" checked={answers[i] === "no"} onChange={() => handleCheck(i, "no")}/>{" "}
                                 No
                             </label>
                         </div>

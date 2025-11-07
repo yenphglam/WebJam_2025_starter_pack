@@ -13,7 +13,7 @@
 	font-weight: 500;
 }
 .quizform{
-	border: .1rem dotted #5D737E;
+	border: .1rem solid #5D737E;
 	border-radius: 1rem;
 	display: flex;
 	align-items: center;
@@ -23,6 +23,30 @@
 	padding: 1.5rem;
 	line-height: 2.5rem;
 	font-size: 1.2rem;
+}
+.checkboxLabel {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.checkbox {
+	border: 2px solid black;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 20px;
+	transition: scale 0.1s ease-in-out;
+}
+.checkbox:hover {
+	scale: 1.1;
+}
+.checkbox:active {
+	scale: 0.9;
+	background-color: #5d737e !important;
+}
+.checkbox:checked {
+	background-color: #64b6ac;
 }
 .quizcheckboxes{
 	display: flex;
