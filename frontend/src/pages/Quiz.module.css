@@ -1,11 +1,9 @@
-.quiztitle {
-	display: flex;
-	justify-content: center;
+.headerSection {
 	text-align: center;
-	flex-direction: column;
 	color: #64B6AC;
-	margin: 3rem auto;
+	margin: 1.5em auto;
 	max-width: 1000px;
+	font-size: 1.5em;
 }
 
 .quizdesc {

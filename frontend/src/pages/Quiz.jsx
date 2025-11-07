@@ -49,12 +49,14 @@ export default function Quiz() {
     const score = answers.filter(a => a === "yes").length;
     const message =
         score <= 3 ? "You probably don't have the flu."
-            : score <= 6 ? "You might have the flu. Make sure to continue to check your symptoms."
-                : "You have the flu. Please consult a healthcare professional for proper diagnosis and treatment if it worsens!";
+            : score <= 6 ? "You might have the flu. Continue to monitor your symptoms."
+                : "You likely have the flu. Please consult a healthcare professional for proper diagnosis and treatment if it worsens!";
 
     return (
         <div>
-            <h1 className={styles.quiztitle}>Flu Quiz</h1>
+            <div className={styles.headerSection}>
+                <h1>Quiz</h1>
+            </div>
             <p className={styles.quizdesc}>Please answer each question truthfully to see if you have the flu.</p>
             <div className={styles.quizform}>
                 <ol>

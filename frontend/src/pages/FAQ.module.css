@@ -1,8 +1,9 @@
 .headerSection {
     text-align: center;
     color: #64B6AC;
-    margin: 3em auto;
+    margin: 1.5em auto;
     max-width: 1000px;
+    font-size: 1.5em;
 }
 
 .questionAnswerSection {

@@ -15,7 +15,7 @@ function createData(name, email) {
 const rows = [
     createData('Allison Hua', 'huaat@uci.edu'),
     createData('Christine Nguyen', 'chrisln4@uci.edu'),
-    createData('Christopher Walden', 'checkdoesgames@gmail.com'),
+    createData('Christopher Walden', 'waldencj@uci.edu'),
     createData('Yen Phuong Lam', 'lamyp@uci.edu'),
 ];
 

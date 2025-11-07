@@ -22,7 +22,7 @@
 	max-width: 1000px;
 }
 
-.header-section > h1 {
+.header-section>h1 {
 	font-size: 2em;
 }
 
@@ -35,12 +35,16 @@
 	max-width: 1200px;
 }
 
-.grid-section > .centered {
+.grid-section>.centered {
 	grid-column: 2;
 }
 
 .spacer {
-    height: 80px;
+	height: 80px;
+}
+
+.page-content {
+	padding-top: 80px;
 }
 
 button {

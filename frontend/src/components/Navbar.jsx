@@ -1,49 +1,49 @@
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
-export default function Navbar({ currentPage, setCurrentPage }) {
-
-    const handleNavClick = (page) => (e) => {
-        e.preventDefault(); // stop page refresh
-        setCurrentPage(page);
-    };
+export default function Navbar() {
+    const location = useLocation();
 
     return (
         <nav className={styles.navbar}>
             <div className={styles.navspacer}>
-                <img src="src\assets\logo.png" alt="HyGenie Logo" onClick={() => setCurrentPage("home")} className={styles.logo}></img>
+                <img
+                    src="src\assets\logo.png"
+                    alt="HyGenie Logo"
+                    onClick={() => (window.location.href = "/")}
+                    className={styles.logo}
+                ></img>
             </div>
             <div className={styles.navbarItems}>
-                <a
-                    href="#"
-                    className={`${styles.navbarItem} ${currentPage === "home" ? styles.selected : ""}`}
-                    onClick={handleNavClick("home")}
-                >
-                    Home
-                </a>
+                <div className={styles.navbarItems}>
+                    <Link
+                        to="/"
+                        className={`${styles.navbarItem} ${location.pathname === "/" ? styles.selected : ""}`}
+                    >
+                        Home
+                    </Link>
 
-                <a
-                    href="#"
-                    className={`${styles.navbarItem} ${currentPage === "quiz" ? styles.selected : ""}`}
-                    onClick={handleNavClick("quiz")}
-                >
-                    Quiz
-                </a>
+                    <Link
+                        to="/quiz"
+                        className={`${styles.navbarItem} ${location.pathname === "/quiz" ? styles.selected : ""}`}
+                    >
+                        Quiz
+                    </Link>
 
-                <a
-                    href="#"
-                    className={`${styles.navbarItem} ${currentPage === "faq" ? styles.selected : ""}`}
-                    onClick={handleNavClick("faq")}
-                >
-                    FAQ
-                </a>
+                    <Link
+                        to="/faq"
+                        className={`${styles.navbarItem} ${location.pathname === "/faq" ? styles.selected : ""}`}
+                    >
+                        FAQ
+                    </Link>
 
-                <a
-                    href="#"
-                    className={`${styles.navbarItem} ${currentPage === "contact" ? styles.selected : ""}`}
-                    onClick={handleNavClick("contact")}
-                >
-                    Contact
-                </a>
+                    <Link
+                        to="/contact"
+                        className={`${styles.navbarItem} ${location.pathname === "/contact" ? styles.selected : ""}`}
+                    >
+                        Contact
+                    </Link>
+                </div>
             </div>
         </nav>
     );

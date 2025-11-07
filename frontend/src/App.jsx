@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/Home.jsx";
 import Quiz from "./pages/Quiz.jsx";
@@ -14,18 +14,19 @@ there are many ways to get your application up and running.
 With App.jsx, we can also define global variables and routes to store information as well as page navigation.
 */
 function App() {
-    const [currentPage, setCurrentPage] = useState("home");
-
     return (
-        <>
-            <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-            <div className="spacer"></div>
-            {currentPage === "home" && <Home setCurrentPage={setCurrentPage} />}
-            {currentPage === "quiz" && <Quiz />}
-            {currentPage === "faq" && <FAQ />}
-            {currentPage === "contact" && <Contact />}
-            <ClickGerm />
-        </>
+        <Router>
+            <Navbar />
+            <div className="page-content">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/quiz" element={<Quiz />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+                <ClickGerm />
+            </div>
+        </Router>
     );
 }
 
