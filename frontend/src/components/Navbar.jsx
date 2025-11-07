@@ -10,7 +10,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
     return (
         <nav className={styles.navbar}>
             <div className={styles.navspacer}>
-                <img src="src\assets\logo.png" alt="HyGenie Logo" className={styles.logo}></img>
+                <img src="src\assets\logo.png" alt="HyGenie Logo" onClick={() => setCurrentPage("home")} className={styles.logo}></img>
             </div>
             <div className={styles.navbarItems}>
                 <a
