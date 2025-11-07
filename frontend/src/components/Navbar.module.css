@@ -16,7 +16,6 @@
 	top: 0;
 	width: 100%;
 	z-index: 100;
-	/* background-color: #FCFFFD; */
 }
 
 .navbarItems {
@@ -41,8 +40,8 @@
 	font-size: 0.7em;
 }
 
-.navspacer{
-	display:flex;
+.navspacer {
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }

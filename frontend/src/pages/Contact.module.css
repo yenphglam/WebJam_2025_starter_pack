@@ -1,17 +1,22 @@
 .headerSection {
-    text-align: center;
-    color: #64B6AC;
-    margin: 3em auto;
-    max-width: 1000px;
+  text-align: center;
+  color: #64B6AC;
+  margin: 3em auto;
+  max-width: 1000px;
 }
 
 .contactTableContainer {
-  max-width: 800px;     /* Maximum width of the table */
-  margin: 2em auto;     /* Center horizontally and add vertical spacing */
+  max-width: 800px;
+  margin: 2em auto;
   border-collapse: collapse;
 }
 
+.contactTable th,
+.contactTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
 .contactTable {
-  width: 100%;           /* Make table fill the container */
-  border: 1px solid #ddd; /* Optional: table border */
+  width: 100%;
 }

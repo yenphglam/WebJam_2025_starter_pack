@@ -1,12 +1,12 @@
-    import { useState, useEffect, useRef } from "react";
-    import "./ClickGerm.css";
+import { useState, useEffect, useRef } from "react";
+import "./ClickGerm.css";
 
-    const GOAL = 10;
-    const SEC_BETWEEN_APPEAR_MIN = 2500;
-    const SEC_BETWEEN_APPEAR_MAX = 5000;
-    const GERM_LIFE = 5000;
+const GOAL = 10;
+const SEC_BETWEEN_APPEAR_MIN = 2500;
+const SEC_BETWEEN_APPEAR_MAX = 5000;
+const GERM_LIFE = 5000;
 
-    export default function ClickGerm() {
+export default function ClickGerm() {
     const [germs, setGerms] = useState([]);
     const [clickCount, setClickCount] = useState(0);
     const [gameOver, setGameOver] = useState(false);
@@ -41,7 +41,7 @@
 
         // Remove germ after its life ends
         setTimeout(() => {
-        setGerms((prev) => prev.filter((g) => g.id !== id));
+            setGerms((prev) => prev.filter((g) => g.id !== id));
         }, GERM_LIFE);
     };
 
@@ -50,12 +50,12 @@
         if (gameOver) return;
 
         const interval =
-        Math.random() * (SEC_BETWEEN_APPEAR_MAX - SEC_BETWEEN_APPEAR_MIN) +
-        SEC_BETWEEN_APPEAR_MIN;
+            Math.random() * (SEC_BETWEEN_APPEAR_MAX - SEC_BETWEEN_APPEAR_MIN) +
+            SEC_BETWEEN_APPEAR_MIN;
 
         timeoutRef.current = setTimeout(() => {
-        spawnGerm();
-        spawnRandomGerms();
+            spawnGerm();
+            spawnRandomGerms();
         }, interval);
     };
 
@@ -66,40 +66,46 @@
 
     useEffect(() => {
         if (gameOver) {
-        clearTimeout(timeoutRef.current);
-        setGerms([]);
-        setWinMessage(true);
-        const timer = setTimeout(() => setWinMessage(false), 2000);
-        return () => clearTimeout(timer);
+            clearTimeout(timeoutRef.current);
+            setGerms([]);
+            setWinMessage(true);
+            const timer = setTimeout(() => setWinMessage(false), 2000);
+            return () => clearTimeout(timer);
         }
     }, [gameOver]);
 
     const handleClick = (id) => {
         setGerms((prev) => prev.filter((g) => g.id !== id));
         setClickCount((prev) => {
-        const newCount = prev + 1;
-        if (newCount >= GOAL) setGameOver(true);
-        return newCount;
+            const newCount = prev + 1;
+            if (newCount >= GOAL) setGameOver(true);
+            return newCount;
         });
     };
 
     return (
         <div className="game-container">
-        {germs.map((g) => (
-            <img
-            key={g.id}
-            className="germ"
-            style={{ top: g.top, left: g.left }}
-            onClick={() => handleClick(g.id)}
-            src="src/assets/germ.png"
-            />
-        ))}
+            {germs.map((g) => (
+                <img
+                    key={g.id}
+                    className="germ"
+                    style={{ top: g.top, left: g.left }}
+                    onClick={() => handleClick(g.id)}
+                    src="src/assets/germ.png"
+                />
+            ))}
 
-        {winMessage && (
-            <div className="win-message">
-            🎉 You killed {GOAL} germs to get away from flu! 🎉
-            </div>
-        )}
+            {!gameOver && clickCount > 0 && clickCount < GOAL && (
+                <div className="status-message">
+                    🦠 You killed a germ! Kill {GOAL - clickCount} more to defeat the flu! 🦠
+                </div>
+            )}
+
+            {winMessage && (
+                <div className="win-message">
+                    🎉 You killed {GOAL} germs to defeat the flu! 🎉
+                </div>
+            )}
 
         </div>
     );

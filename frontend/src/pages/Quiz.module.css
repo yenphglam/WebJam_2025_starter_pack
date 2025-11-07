@@ -1,18 +1,20 @@
-.quiztitle{
+.quiztitle {
 	display: flex;
 	justify-content: center;
 	text-align: center;
 	flex-direction: column;
-    color: #64B6AC;
-    margin: 3rem auto;
-    max-width: 1000px;
+	color: #64B6AC;
+	margin: 3rem auto;
+	max-width: 1000px;
 }
-.quizdesc{
+
+.quizdesc {
 	font-size: 1.2rem;
 	color: #000000;
 	font-weight: 500;
 }
-.quizform{
+
+.quizform {
 	border: .1rem solid #5D737E;
 	border-radius: 1rem;
 	display: flex;
@@ -24,11 +26,13 @@
 	line-height: 2.5rem;
 	font-size: 1.2rem;
 }
+
 .checkboxLabel {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
 }
+
 .checkbox {
 	border: 2px solid black;
 	appearance: none;
@@ -38,29 +42,35 @@
 	border-radius: 20px;
 	transition: scale 0.1s ease-in-out;
 }
+
 .checkbox:hover {
 	scale: 1.1;
 }
+
 .checkbox:active {
 	scale: 0.9;
 	background-color: #5d737e !important;
 }
+
 .checkbox:checked {
 	background-color: #64b6ac;
 }
-.quizcheckboxes{
+
+.quizcheckboxes {
 	display: flex;
 	align-items: center;
 	gap: 50px;
 	margin-left: 30px;
 }
-.errormsg{
+
+.errormsg {
 	color: red;
 	font-weight: bold;
 	margin-top: 1rem;
 	font-size: 1.5rem;
 }
-.submitbtn{
+
+.submitbtn {
 	background-color: #64B6AC;
 	color: white;
 	border: none;
@@ -70,12 +80,14 @@
 	font-size: 1.3rem;
 	margin-top: 1rem;
 }
-.submitcontainer{
+
+.submitcontainer {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 2rem;
 }
-.quizscore{
+
+.quizscore {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

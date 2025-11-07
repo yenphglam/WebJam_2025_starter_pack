@@ -1,7 +1,7 @@
 import styles from "./Home.module.css";
 
-export default function Home({setCurrentPage}) {
-    return(
+export default function Home({ setCurrentPage }) {
+    return (
         <>
             <div className={styles.headerSection}>
                 <div className={styles.titleContainer}>

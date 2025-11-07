@@ -5,6 +5,8 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 
 function createData(name, email) {
     return { name, email };
@@ -23,8 +25,8 @@ export default function Contact() {
             <div className={styles.headerSection}>
                 <h1>Contact</h1>
             </div>
-            <TableContainer className={styles.contactTableContainer}>
-                <Table className={styles.contactTable} size="small" aria-label="a dense table">
+            <TableContainer component={Paper} className={styles.contactTableContainer}>
+                <Table className={styles.contactTable} size="small" aria-label="contact table">
                     <TableHead>
                         <TableRow>
                             <TableCell><strong>Name</strong></TableCell>
